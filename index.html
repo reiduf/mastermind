@@ -1,19 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-  	<meta charset="utf-8">
-  	<meta name="description" content="Your description goes here">
-  	<meta name="keywords" content="one, two, three">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		
-		<title>Blank Template</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="A logical color guessing game"
+      content="Your description goes here"
+    />
+    <meta name="keywords" content="one, two, three" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-		<!-- external CSS link -->
-		<link rel="stylesheet" href="css/normalize.css">
-		<link rel="stylesheet" href="css/style.css">
-	</head>
-	<body>
+    <title>Mastermind</title>
 
-		<script type="text/javascript" src="js/main.js"></script>
-	</body>
+    <!-- external CSS link -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <!-- ------------------------------------>
+
+  <body>
+    <h1>mastermind</h1>
+
+    <div id="computer-cover-placeholder">
+      <div class="computer-guess-icon comp-color-1">?</div>
+      <div class="computer-guess-icon comp-color-2">?</div>
+      <div class="computer-guess-icon comp-color-3">?</div>
+      <div class="computer-guess-icon comp-color-4">?</div>
+    </div>
+
+    <hr />
+
+    <!-- Player Interaction Zone ------------------------------------------------------->
+    <h2>Use buttons below to create guess</h2>
+    <div id="player-button-container">
+      <div class="player-button red"></div>
+      <div class="player-button green"></div>
+      <div class="player-button blue"></div>
+      <div class="player-button yellow"></div>
+      <div class="player-button black"></div>
+      <div class="player-button white"></div>
+    </div>
+
+    <div id="player-peg-container">
+      <div class="player-guess-icon player-color-1"></div>
+      <div class="player-guess-icon player-color-2"></div>
+      <div class="player-guess-icon player-color-4"></div>
+      <div class="player-guess-icon player-color-3"></div>
+    </div>
+    <button>Submit Guess</button>
+
+    <hr />
+    <!----- Guess Grid Items ------------------------------------------------------------>
+    <h2>Guess Log</h2>
+
+    <!-- Row/Guess 1 data-->
+    <section class="guess-row-container" id="guess-row-1">
+      <div class="guess-number-label">Guess 1</div>
+
+      <div class="guess-peg-container">
+        <div class="guess-grid-peg" id="guess-1-peg-1"></div>
+        <div class="guess-grid-peg" id="guess-1-peg-2"></div>
+        <div class="guess-grid-peg" id="guess-1-peg-3"></div>
+        <div class="guess-grid-peg" id="guess-1-peg-4"></div>
+      </div>
+
+      <div class="results-container">
+        <div class="results-peg" id="guess-1-result-1"></div>
+        <div class="results-peg" id="guess-1-result-2"></div>
+        <div class="results-peg" id="guess-1-result-3"></div>
+        <div class="results-peg" id="guess-1-result-4"></div>
+      </div>
+    </section>
+    <!-------------------------------------------------------------->
+
+    <!-- Row/Guess 2 data-->
+    <section class="guess-row-container" id="guess-row-2">
+      <div class="guess-number-label">Guess 2</div>
+
+      <div class="guess-peg-container">
+        <div class="guess-grid-peg" id="guess-2-peg-1"></div>
+        <div class="guess-grid-peg" id="guess-2-peg-2"></div>
+        <div class="guess-grid-peg" id="guess-2-peg-3"></div>
+        <div class="guess-grid-peg" id="guess-2-peg-4"></div>
+      </div>
+
+      <div class="results-container">
+        <div class="results-peg" id="guess-2-result-1"></div>
+        <div class="results-peg" id="guess-2-result-2"></div>
+        <div class="results-peg" id="guess-2-result-3"></div>
+        <div class="results-peg" id="guess-2-result-4"></div>
+      </div>
+    </section>
+    <!-------------------------------------------------------------->
+
+    <!-- Row/Guess 3 data-->
+    <section class="guess-row-container" id="guess-row-3">
+      <div class="guess-number-label">Guess 3</div>
+
+      <div class="guess-peg-container">
+        <div class="guess-grid-peg" id="guess-3-peg-1"></div>
+        <div class="guess-grid-peg" id="guess-3-peg-2"></div>
+        <div class="guess-grid-peg" id="guess-3-peg-3"></div>
+        <div class="guess-grid-peg" id="guess-3-peg-4"></div>
+      </div>
+
+      <div class="results-container">
+        <div class="results-peg" id="guess-3-result-1"></div>
+        <div class="results-peg" id="guess-3-result-2"></div>
+        <div class="results-peg" id="guess-3-result-3"></div>
+        <div class="results-peg" id="guess-3-result-4"></div>
+      </div>
+    </section>
+    <!-------------------------------------------------------------->
+
+    <!-- Row/Guess 4 data-->
+    <section class="guess-row-container" id="guess-row-4">
+      <div class="guess-number-label">Guess 4</div>
+
+      <div class="guess-peg-container">
+        <div class="guess-grid-peg" id="guess-4-peg-1"></div>
+        <div class="guess-grid-peg" id="guess-4-peg-2"></div>
+        <div class="guess-grid-peg" id="guess-4-peg-3"></div>
+        <div class="guess-grid-peg" id="guess-4-peg-4"></div>
+      </div>
+
+      <div class="results-container">
+        <div class="results-peg" id="guess-4-result-1"></div>
+        <div class="results-peg" id="guess-4-result-2"></div>
+        <div class="results-peg" id="guess-4-result-3"></div>
+        <div class="results-peg" id="guess-4-result-4"></div>
+      </div>
+    </section>
+    <!-------------------------------------------------------------->
+
+    <!-- Row/Guess 5 data-->
+    <section class="guess-row-container" id="guess-row-5">
+      <div class="guess-number-label">Guess 5</div>
+
+      <div class="guess-peg-container">
+        <div class="guess-grid-peg" id="guess-5-peg-1"></div>
+        <div class="guess-grid-peg" id="guess-5-peg-2"></div>
+        <div class="guess-grid-peg" id="guess-5-peg-3"></div>
+        <div class="guess-grid-peg" id="guess-5-peg-4"></div>
+      </div>
+
+      <div class="results-container">
+        <div class="results-peg" id="guess-5-result-1"></div>
+        <div class="results-peg" id="guess-5-result-2"></div>
+        <div class="results-peg" id="guess-5-result-3"></div>
+        <div class="results-peg" id="guess-5-result-4"></div>
+      </div>
+    </section>
+    <!-------------------------------------------------------------->
+
+    <!-- Row/Guess 6 data-->
+    <section class="guess-row-container" id="guess-row-6">
+      <div class="guess-number-label">Guess 6</div>
+
+      <div class="guess-peg-container">
+        <div class="guess-grid-peg" id="guess-6-peg-1"></div>
+        <div class="guess-grid-peg" id="guess-6-peg-2"></div>
+        <div class="guess-grid-peg" id="guess-6-peg-3"></div>
+        <div class="guess-grid-peg" id="guess-6-peg-4"></div>
+      </div>
+
+      <div class="results-container">
+        <div class="results-peg" id="guess-6-result-1"></div>
+        <div class="results-peg" id="guess-6-result-2"></div>
+        <div class="results-peg" id="guess-6-result-3"></div>
+        <div class="results-peg" id="guess-6-result-4"></div>
+      </div>
+    </section>
+    <!-------------------------------------------------------------->
+
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
 </html>

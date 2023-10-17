@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap");
+
 /* Box Model Hack */
 * {
   box-sizing: border-box;
@@ -5,16 +7,16 @@
 
 /* Clear fix hack */
 .clearfix:after {
-     content: ".";
-     display: block;
-     clear: both;
-     visibility: hidden;
-     line-height: 0;
-     height: 0;
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
 }
 
 .clear {
-	clear: both;
+  clear: both;
 }
 
 /******************************************
@@ -22,21 +24,161 @@
 /*******************************************/
 
 body {
-
+  text-align: center;
+  font-family: "Orbitron", sans-serif;
 }
-
 
 /******************************************
 /* LAYOUT
 /*******************************************/
-header {
-
+#computer-cover-placeholder,
+#player-peg-container {
+  width: 300px;
+  background: #d5d7db;
+  margin: 10px auto;
+  border-radius: 15px;
+  margin-bottom: 40px;
 }
 
-footer {
+#player-peg-container {
+  margin-top: 20px;
+  background: #ebecef;
+  margin-bottom: 20px;
+}
 
+.computer-guess-icon,
+.player-guess-icon,
+.guess-grid-peg,
+.results-peg,
+.player-button {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  background: #edeff2;
+  border-radius: 50%;
+  margin: 12px 10px;
+}
+
+.player-button {
+  width: 35px;
+  height: 35px;
+  margin: 10px 5px;
+  box-shadow: 0px 1px 3px 2px lightgray;
+}
+
+.red {
+  background-color: red;
+}
+.green {
+  background-color: green;
+}
+.blue {
+  background-color: blue;
+}
+.yellow {
+  background-color: yellow;
+}
+.black {
+  background-color: black;
+}
+.white {
+  background-color: white;
+}
+
+.player-guess-icon {
+  background-color: white;
+}
+
+.results-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.results-peg {
+  width: 20px;
+  height: 20px;
+}
+
+.guess-row-container {
+  margin: 20px 50px;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  gap: 10px;
+}
+
+.guess-number-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.guess-peg-container {
+  background: lightgray;
+  border-radius: 15px;
 }
 
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
+h1 {
+  font-size: 50px;
+  margin-bottom: 50px;
+}
+
+h2 {
+  margin-top: 10px;
+  padding: 10px;
+  margin-bottom: 8px;
+}
+
+hr {
+  width: 90vw;
+}
+
+button {
+  padding: 10px 25px;
+  margin: 20px auto;
+  border: none;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: lightgray;
+}
+
+/****************************************
+/* Media Queries
+/****************************************/
+@media (width < 500px) {
+  h1 {
+    font-size: 45px;
+    margin-bottom: 30px;
+  }
+  #computer-cover-placeholder,
+  #player-peg-container {
+    width: 90vw;
+  }
+
+  .guess-row-container {
+    width: 90vw;
+    margin: 10px auto;
+  }
+
+  .guess-grid-peg {
+    width: 30px;
+    height: 30px;
+    margin: 12px 5px;
+  }
+
+  .results-container {
+    flex-wrap: wrap;
+  }
+
+  .results-peg {
+    width: 15px;
+    height: 15px;
+    margin: 5px;
+  }
+}
